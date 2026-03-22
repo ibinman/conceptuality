@@ -154,20 +154,9 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 8rem 3rem 4rem;
+      padding: 10rem 3rem 6rem;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -10%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
-      pointer-events: none;
     }
 
     .hero-inner {
@@ -182,7 +171,7 @@
 
     .hero-content h1 {
       font-family: var(--serif);
-      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
       font-weight: 400;
       line-height: 1.15;
       margin-bottom: 1.5rem;
@@ -195,7 +184,7 @@
     }
 
     .hero-content p {
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       color: var(--text-secondary);
       line-height: 1.7;
       margin-bottom: 2.5rem;
@@ -259,8 +248,8 @@
 
     .hero-logo-wrap {
       position: relative;
-      width: 320px;
-      height: 320px;
+      width: 420px;
+      height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -281,7 +270,7 @@
     }
 
     .hero-logo-wrap img {
-      width: 260px;
+      width: 340px;
       height: auto;
       filter: drop-shadow(0 0 40px rgba(201, 168, 76, 0.15));
     }
@@ -590,32 +579,17 @@
       justify-content: center;
     }
 
-    .about-image-placeholder {
+    .about-image img {
       width: 300px;
       height: 380px;
-      background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-surface) 100%);
+      object-fit: cover;
       border: 1px solid var(--dark-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      filter: grayscale(20%);
+      transition: filter 0.4s;
     }
 
-    .about-image-placeholder::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 60%;
-      background: linear-gradient(to top, var(--dark-surface), transparent);
-    }
-
-    .about-image-placeholder svg {
-      width: 120px;
-      height: 120px;
-      opacity: 0.15;
+    .about-image img:hover {
+      filter: grayscale(0%);
     }
 
     /* ===== CTA ===== */
@@ -842,7 +816,7 @@
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-brand">
-      <img src="logo.jpeg" alt="Conceptuality Partners">
+      <img src="logo.png" alt="Conceptuality Partners">
       <div class="nav-brand-text">Conceptuality <span>Partners</span></div>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -874,7 +848,7 @@
       </div>
       <div class="hero-visual fade-in">
         <div class="hero-logo-wrap">
-          <img src="logo.jpeg" alt="Conceptuality Partners Logo">
+          <img src="logo.png" alt="Conceptuality Partners Logo">
         </div>
       </div>
     </div>
@@ -987,12 +961,7 @@
         <a href="#contact" class="btn-primary">Let's build</a>
       </div>
       <div class="about-image">
-        <div class="about-image-placeholder">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="35" r="18" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
-            <path d="M20 95 C20 65 80 65 80 95" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
-          </svg>
-        </div>
+        <img src="sapir.png" alt="Sapir — Conceptuality Partners">
       </div>
     </div>
   </section>
